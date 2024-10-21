@@ -79,7 +79,7 @@ public class JWTService implements CommandLineRunner {
   }
 
 
-  public boolean isTokenValid(String token, String email) {
+  public boolean validateToken(String token, String email) {
     final String userEmailFetchedFromToken = extractEmail(token);
     return (userEmailFetchedFromToken.equals(email)) && !isTokenExpired(token);
   }

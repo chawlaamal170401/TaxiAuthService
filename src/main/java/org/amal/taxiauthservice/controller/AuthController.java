@@ -57,7 +57,6 @@ public class AuthController {
 
   @GetMapping("/validate")
   public ResponseEntity<?> validate(HttpServletRequest request, HttpServletResponse response) {
-    System.out.println("Inside validate controller");
     for(Cookie cookie: request.getCookies()) {
       System.out.println(cookie.getName() + " " + cookie.getValue());
     }
